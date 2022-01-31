@@ -1,0 +1,52 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  font-size: 20px;
+  font-family: sans-serif;
+
+  --dark-blue: #073b4c;
+  --light-blue: #118ab2;
+  --green: #06d6a0;
+  --yellow: #f5ab00;
+  --pink: #ef476f;
+}
+
+header {
+    text-align: center;
+    background-color: var(--pink);
+    padding: 3rem 1rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    margin: 0;
+    text-shadow: 2px 2px var(--light-blue), 4px 4px var(--yellow);
+  }
+
+  button {
+    all: unset;
+    display: block;
+    word-break: keep-all;
+    word-wrap: normal;
+    color: white;
+    background-color: var(--light-blue);
+    padding: 0.25em 0.4em;
+    border-radius: 0.3em;
+    border: 0.1em solid transparent;
+    box-shadow: 3px 3px 0px var(--pink);
+  }
+
+  .todo-input {
+    display: flex;
+  }
+  

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Instance Example</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<div id="app">
+<header>
+    <h1>Todo App ({{ todosCount }})</h1>
+</header>
+<body>
+    <div id="app">
+        <section class="todo-input">
+        <input v-model="newTodo" type="text"><button @click="addTodo">Add</button>
+        <p :class='bgColor'>{{ counter }}</p>
+
+        </section>
+
+
+    <ul>
+        <li v-for="todo in todos" type="checkbox" > {{ todo }}</li>
+    </ul>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+    Vue.createApp({
+        data() {
+           return {
+                todos: ["Learn CSS", "Learn JS"],
+                newTodo: "",    
+            };
+        },
+        methods: {
+            addTodo () {
+                this.todos.push(this.newTodo);
+
+            },
+        },
+        computed: {
+            todosCount () {
+                return this.todos.length;
+                
+            },
+
+        },
+    }).mount("#app")
+    console.log(app.userName)
+    </script>
+</body>
+</html>
