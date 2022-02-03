@@ -21,7 +21,9 @@
 
 
     <ul>
-        <li v-for="todo in todos" type="checkbox" > {{ todo }}</li>
+        <li v-for="todo in todos">
+            <input type="checkbox" /> {{ todo }}
+        </li>
     </ul>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
